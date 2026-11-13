@@ -2,6 +2,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+
+st.write("Current folder:", os.getcwd())
+st.write("Files in folder:", os.listdir())
 
 # Import your separate files
 from Components.styling import apply_styling
@@ -10,7 +14,7 @@ from Components.buttons import show_filters
 from Components.graphs import show_payment_graph
 
 # Load datasets
-Retail_sales = pd.read_csv("Fashion_Retail_Sales.csv")
+Retail_sales = pd.read_csv("/workspaces/fashion-analytics/Fashion Analytics Proj/Fashion_Retail_Sales.csv")
 
 # Apply styling
 apply_styling()

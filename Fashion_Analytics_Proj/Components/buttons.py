@@ -6,8 +6,7 @@ def show_filters(Retail_sales):
 
     payment_options = Retail_sales["Payment Method"].unique().tolist()
 
-    selected_payment = st.sidebar.multiselect
-    (
+    selected_payment = st.sidebar.multiselect(
         "Select Payment Method",
         payment_options,
         default=payment_options
